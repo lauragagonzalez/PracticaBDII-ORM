@@ -31,3 +31,5 @@ result = (session.query(Film.title, func.count(FilmActor.actor_id).label('num_ac
 
 for title, num_actores in result:
     print(f"{title} - {num_actores} actores")
+
+session.close()
